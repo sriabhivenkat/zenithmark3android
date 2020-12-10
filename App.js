@@ -19,11 +19,16 @@ export default function App() {
   if(fontsLoaded) {
   return (
     <View style={styles.container}>
-      <Text style={styles.baseText}>
-        <Text style={styles.titleText}>
-            Zenith
+      <View style={{flexDirection:'row', padding:10}}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText}>Zenith</Text>
         </Text>
-      </Text>
+      </View>
+      <View style={{flexDirection: 'row', padding:10}}>
+        <Text style={styles.bodyText}>
+          Sign in below.
+        </Text>
+      </View>
     </View>
   );
   } else {
@@ -41,19 +46,25 @@ const styles = StyleSheet.create({
 
   container: {
     flex:1,
+    flexDirection:'column',
     backgroundColor: 'white',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-start',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
     top:0, left:0, right:0, bottom:0
   },
-
   baseText: {
-    fontFamily: "kollektif-bolditalic"
+    fontFamily: 'kollektif-bolditalic'
   },
   titleText: {
     fontSize: 70,
     fontWeight: 'bold',
     position: 'absolute',
     color: 'black'
+  },
+  
+  bodyText: {
+    fontFamily: 'kollektif',
+    fontSize: 25,
+
   }
 });
